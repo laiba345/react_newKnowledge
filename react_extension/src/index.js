@@ -4,7 +4,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client';
 // 3. 引入根组件
 import App from './App'
-import { BrowserRouter } from 'react-router-dom'
+// import { BrowserRouter } from 'react-router-dom'
 
 // 进行一次渲染
 // ReactDOM.render(
@@ -13,8 +13,8 @@ import { BrowserRouter } from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    //   <React.StrictMode>
-    //     <App />
-    //   </React.StrictMode>
-    <BrowserRouter><App /></BrowserRouter>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    // <BrowserRouter><App /></BrowserRouter>
 );
