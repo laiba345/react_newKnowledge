@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 
 export default class Demo extends Component {
-  // 相关状态可以直接写在外面
+  // 相关状态可以直接写在外面 n
   state = {
     count: 0,
   };
   add = () => {
     // 一、对象式的setState
-    // 函数体
     //1. 获取原来的count值
     // const { count } = this.state;
     // //2. 更新状态; 里面可以设置相应的状态累加操作；加了一个对象即状态改变对象；
@@ -17,7 +16,7 @@ export default class Demo extends Component {
     // });
 
     // 二、函数式的setState
-    // 优势，状态可以直接传入进来
+    // 优势，状态可以直接传入进来，组件传过来的props的值也可以获取
     // this.setState((state, props) => {
     //   console.log(state, props);
     //   // 函数调用的返回值是这个对象；
