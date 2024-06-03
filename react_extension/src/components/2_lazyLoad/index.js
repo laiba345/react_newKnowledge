@@ -6,7 +6,7 @@ import { NavLink, Route, Routes } from 'react-router-dom'
 // import About from './About'
 
 // import Loading from './Loading'
-// 定义变量的形式；lazy是一个函数，里面还要传入一个函数
+// 定义变量的形式；lazy是一个函数，里面还要传入一个函数； 使用懒加载的形式的来加入相应的内容
 // suspense：现点现加载；
 const Home = lazy(() => import('./Home'))
 const About = lazy(() => import('./About'))

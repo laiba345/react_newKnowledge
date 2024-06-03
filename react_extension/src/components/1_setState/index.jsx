@@ -6,7 +6,7 @@ export default class Demo extends Component {
     count: 0,
   };
   add = () => {
-    // 一、对象式的setState
+    // 一、对象式的setState  
     //1. 获取原来的count值
     // const { count } = this.state;
     // //2. 更新状态; 里面可以设置相应的状态累加操作；加了一个对象即状态改变对象；
@@ -24,6 +24,8 @@ export default class Demo extends Component {
     // })
 
     // 箭头函数简写形式时：如果返回一个函数 简写 用() 括起来
+
+    // 一个对象式，一个函数式，函数式作用在于可以通过参数传入state和props
     this.setState((state) => ({ count: state.count + 1 }));
   };
   render() {
