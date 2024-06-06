@@ -10,7 +10,7 @@ export default class Demo extends Component {
     //1. 获取原来的count值
     // const { count } = this.state;
     // //2. 更新状态; 里面可以设置相应的状态累加操作；加了一个对象即状态改变对象；
-    // //!!! react状态的更新是异步的；
+    // //!!! react状态的更新是异步的；更新状态可以写成括号里面是对象的形式
     // this.setState({ count: count + 1 }, () => {
     //   console.log(this.state.count); // 回调；想拿最新的值就可以在此处拿到；1
     // });
@@ -24,7 +24,7 @@ export default class Demo extends Component {
     // })
 
     // 箭头函数简写形式时：如果返回一个函数 简写 用() 括起来
-
+    // 只有一个return是可以简写的；
     // 一个对象式，一个函数式，函数式作用在于可以通过参数传入state和props
     this.setState((state) => ({ count: state.count + 1 }));
   };

@@ -55,6 +55,8 @@ const Login = lazy(()=>import('@/pages/Login'))
 (3). useState()说明:
         参数: 第一次初始化指定的值在内部作缓存
         返回值: 包含2个元素的数组, 第1个为内部当前状态值, 第2个为更新状态值的函数
+                - 1. 内部当前状态值
+                - 2. 更新状态值的函数（函数）
 (4). setXxx()2种写法 :
         setXxx(newValue): 参数为非函数值, 直接指定新的状态值, 内部用其覆盖原来的状态值
         setXxx(value => newValue): 参数为函数, 接收原本的状态值, 返回新的状态值, 内部用其覆盖原来的状态值
@@ -74,7 +76,7 @@ const Login = lazy(()=>import('@/pages/Login'))
           }
         }, [stateValue]) // 如果指定的是[], 回调函数只会在第一次render()后执行
     
-(4). 可以把 useEffect Hook 看做如下三个函数的组合
+(4). 可以把 useEffect Hook 看做如下三个函数的组合；因为这个钩子本来就是对生命周期中的函数进行一系列操作
         componentDidMount()
         componentDidUpdate()
     	componentWillUnmount()  
@@ -83,3 +85,13 @@ const Login = lazy(()=>import('@/pages/Login'))
 (1). Ref Hook可以在函数组件中存储/查找组件内的标签或任意其它数据
 (2). 语法: const refContainer = useRef()
 (3). 作用:保存标签对象,功能与React.createRef()一样
+
+## 6. Fragment 
+使用
+```
+<Fragment><Fragment>
+<></>
+```
+作用：可以不用必须有一个真实的DOM根标签了；
+
+
