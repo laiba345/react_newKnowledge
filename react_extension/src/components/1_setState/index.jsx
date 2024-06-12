@@ -25,7 +25,7 @@ export default class Demo extends Component {
 
     // 箭头函数简写形式时：如果返回一个函数 简写 用() 括起来
     // 只有一个return是可以简写的；
-    // 一个对象式，一个函数式，函数式作用在于可以通过参数传入state和props
+    // 一个对象式，一个函数式，函数式作用在于可以通过参数传入state和props，{}中通常是书写对象的形式；
     this.setState((state) => ({ count: state.count + 1 }));
   };
   render() {
