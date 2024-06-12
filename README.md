@@ -101,18 +101,18 @@ const Login = lazy(()=>import('@/pages/Login'))
 1) 创建Context容器对象：XxxContext需要放在大家都能访问到的区域
 const XxxContext = React.createContext()  
 
-2) 渲染子组时，外面包裹xxxContext.Provider, 通过value属性给后代组件传递数据：
+2) 渲染子组时，外面包裹xxxContext.Provider, 通过value属性给后代组件传递数据：（通过value属性给后台传递数据）
 <xxxContext.Provider value={数据}>
         子组件
 </xxxContext.Provider>
 
 3) 后代组件读取数据：
 
-//第一种方式:仅适用于类组件 
+// 第一种方式:仅适用于类组件，在类组件中想要使用的话需要先声明接收 
 static contextType = xxxContext  // 声明接收context
 this.context // 读取context中的value数据
         
-//第二种方式: 函数组件与类组件都可以； 第二种方式适用于两种模式
+// 第二种方式: 函数组件与类组件都可以； 第二种方式适用于两种模式
 <xxxContext.Consumer>
         {
                 value => ( // value就是context中的value数据

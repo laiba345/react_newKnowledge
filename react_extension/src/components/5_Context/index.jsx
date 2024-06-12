@@ -57,6 +57,7 @@ class B extends Component {
     }
 } */
 
+// 函数式组件直接通过return来返回相应的内容
 function C() {
     return (
         <div className='grand'>
