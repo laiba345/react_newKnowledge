@@ -21,4 +21,9 @@
 12. span标签与普通的HTML中使用方式相同，其是一个内联元素，主要用于包裹和分组小段的文本或其他内联元素。**通过JSX语法，更易于结合JS逻辑、条件渲染和组件化结构**。
 13. 父组件的状态只要一更新就会重新帮你调用render
 14. 内容大多都是在render中书写，return返回的语句是jsx语法
-15. 
+15. 真正的标签体内容是通过this.props.children来获取
+```
+<A>hello!<A/>
+在子组件中通过{ this.props.children }来获取内容
+```
+16. 在 React 中，this.props.children 是一个特殊的属性，用来表示组件的子节点（children）。这些子节点是通过 JSX 语法在父组件中传递的内容。
