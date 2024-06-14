@@ -39,6 +39,7 @@ class B extends Component {
         console.log('B --- render')
         return (
             <div className="b">
+                {/* 对于render搞定组件来说，其传入的参数还是在this.props当中，这一点很关键 */}
                 <h2>我是B组件, { this.props.name }</h2>
             </div>
         );

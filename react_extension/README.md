@@ -27,3 +27,29 @@
 在子组件中通过{ this.props.children }来获取内容
 ```
 16. 在 React 中，this.props.children 是一个特殊的属性，用来表示组件的子节点（children）。这些子节点是通过 JSX 语法在父组件中传递的内容。
+17. webpack 可以帮忙检测兼容性和语法检查等，还可以打包，让网页上方的react图标
+- 我们平时训练主要是通过 npm run start 开启了一台本地服务器
+- 很多内容都没有弄好
+- 打包流程
+    - 1. 停止服务器
+    - 2. npm run build（生成一个static文件，里面很复杂）
+    - 3. 静态文件需要部署到服务器上效果才会更好
+        - express Node
+        - 第三方库，如serve（全局安装这个库）
+        - 安装全局的第三方库命令：npm i serve -g
+            - 再通过serve build来操作运行即可
+    - 如何让一个应用打包上线去运行，这一点很关键
+- 如果没有入口index.jsx 需要具体引入相应的jsx文件，要不然找不到会报错
+18. 生命周期钩子；
+    - static getDerivedStateFromProps(props, state)
+        - 在调用'render'方法之间调用，并且在初始挂载及后续更新时都会被调用。
+        - 它应返回一个对象来更新state，如果不需要更新，则返回null
+
+19. 组件错误处理
+- 错误处理（Error Handling）
+    - 当组件渲染过程中、生命周期方法或子组件的构造函数中抛出错误时调用：
+- static getDerivedStateFromError(error)
+    - 用于渲染备用UI。
+    - 在抛出错误后调用，返回一个对象来更新state。
+- componentDidCatch(error, info)
+    - 捕获错误，并记录错误信息。

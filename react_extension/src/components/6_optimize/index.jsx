@@ -9,7 +9,7 @@ export default class Parent extends PureComponent {
     changeCar = () => {
         this.setState({ carName: '迈巴赫' })
 
-        // 使用了PureComponent，在进行更新的时候，一定不要和原来的对象发生关系
+        // 使用了PureComponent，在进行更新的时候，一定不要和原来的对象发生关系，尤其是复制地址等操作；
         // 如果和原来对象相关，阀门会认为是同一个东西，阀门会关闭
         // const obj = this.state
         // obj.carName = '迈巴赫'
